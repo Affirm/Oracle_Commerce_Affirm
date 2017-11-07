@@ -1,0 +1,16 @@
+ <pipelinemanager>
+  <pipelinechain headlink="executeValidateForCheckoutChain" classname="atg.service.pipeline.PipelineChain" name="processOrder" resultclassname="atg.service.pipeline.PipelineResultImpl" transaction="TX_REQUIRED">
+
+    <pipelinelink transaction="TX_MANDATORY" name="authorizePayment" xml-combine="replace">
+        <processor jndi="/atg/commerce/order/processor/AuthorizePayment"/>
+        <transition returnvalue="1" link="debitPayment"/>
+    </pipelinelink>
+    
+    <pipelinelink transaction="TX_MANDATORY" name="debitPayment">
+        <processor jndi="/affirm/commerce/order/processor/DebitPayment"/>
+        <transition returnvalue="1" link="updateGiftRepository"/>
+    </pipelinelink>
+    
+    
+   </pipelinechain> 
+  </pipelinemanager>

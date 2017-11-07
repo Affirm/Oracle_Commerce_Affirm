@@ -1,0 +1,7 @@
+build/*
+lib/classes.jar
+config/config.jar
+Versioned/build/*
+Versioned/lib/classes.jar
+Versioned/config/config.jar
+

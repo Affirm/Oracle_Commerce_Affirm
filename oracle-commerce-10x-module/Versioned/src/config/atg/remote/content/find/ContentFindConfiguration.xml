@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- Customizations for merchandising find configuration -->
+
+<find-configuration site-filtering="true">
+  <!-- Catalogs Custom Find view -->
+  <asset-family id="catalogs">
+    <asset-type
+      id="affirmRule"
+      site-filtering="true">
+      <repository-path>/atg/commerce/catalog/ProductCatalog</repository-path>
+      <repository-item-type>affirmRule</repository-item-type>
+    </asset-type>
+  </asset-family>
+
+</find-configuration>

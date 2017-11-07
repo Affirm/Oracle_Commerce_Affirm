@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src/Java"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/opt/atg/DAS/lib/classes.jar"/>
+	<classpathentry kind="lib" path="/opt/atg/DCS/lib/classes.jar"/>
+	<classpathentry kind="lib" path="/opt/jboss/modules/system/layers/base/javax/servlet/api/main/jboss-servlet-api_3.0_spec-1.0.2.Final-redhat-2.jar"/>
+	<classpathentry kind="output" path="build/classes"/>
+</classpath>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE find-configuration
+  PUBLIC "-//Art Technology Group, Inc.//DTD Asset Manager Find Configuration//EN"
+  'http://www.atg.com/dtds/find-configuration/find-configuration_1.0.dtd'>
+
+<find-configuration site-filtering="true">
+
+  <asset-family id="affirmRule" site-filtering="false">
+    <display-name-resource>browseTab.view.affirmRules</display-name-resource>
+    <result-list page-size="500"/>
+    <default-asset-type>affirmRule</default-asset-type>
+    <asset-type id="affirmRule" site-filtering="false" exclude-subtypes="true">
+      <repository-path>/atg/commerce/catalog/ProductCatalog</repository-path>
+      <repository-item-type>affirmRule</repository-item-type>
+    </asset-type>
+  </asset-family>
+
+</find-configuration>
+

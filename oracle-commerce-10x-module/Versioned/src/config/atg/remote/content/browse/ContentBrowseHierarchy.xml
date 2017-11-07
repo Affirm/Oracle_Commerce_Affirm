@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<browse-hierarchy xml-combine="append">
+
+  <browse-item id="home" xml-combine="append">
+    <browse-item reference-id="affirmRules"/>
+  </browse-item>
+
+  <!-- The Affirm rule node -->
+  <browse-item id="affirmRules"
+               label-resource="node.affirmRules.label"
+               is-root="true">
+    <list-definition id="affirmRuleText"
+                     retriever="query"
+                     child-type="/atg/commerce/catalog/ProductCatalog:affirmRule">
+      <retriever-parameter name="query"
+                           value="ALL" />
+    </list-definition>
+  </browse-item> 
+
+</browse-hierarchy>
+

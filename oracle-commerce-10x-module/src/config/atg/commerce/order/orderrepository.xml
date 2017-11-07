@@ -1,0 +1,90 @@
+<gsa-template>
+
+	<header>
+		<name>Affirm Related Order Additions</name>
+		<author>ATG</author>
+	</header>
+	
+	<!-- Payment Group -->
+	<item-descriptor name="paymentGroup" xml-combine="append">
+		<attribute name="isolationLevel" value="readCommitted" />
+		<table name="dcspp_pay_group">
+			<property name="type" xml-combine="append">
+				<option code="1000" value="affirmPaymentGroup" />
+			</property>
+		</table>
+	</item-descriptor>
+
+	<!-- Affirm Payment Group -->
+	<item-descriptor name="affirmPaymentGroup" super-type="paymentGroup" sub-type-value="affirmPaymentGroup">
+		<table name="AFFIRM_PAYMENT_GROUP" type="auxiliary" id-column-name="payment_group_id">
+        	<property name="checkoutToken" data-type="string" column-name="CHECKOUT_TOKEN" display-name="Affirm Checkout Token" />
+	        <property name="chargeId" data-type="string" column-name="CHARGE_ID" display-name="Affirm Charge Id" />
+	        <property name="authTxnId" data-type="string" column-name="AUTH_TXN_ID" display-name="Affirm Auth TXN Id" />
+		</table>
+		
+
+		<table shared-table-sequence="1" name="dcspp_bill_addr" id-column-name="payment_group_id" type="auxiliary">
+	      <property readable="true" display-name-resource="prefix" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="prefix" column-name="prefix" category-resource="categoryName">
+	        <attribute name="propertySortPriority" value="10"/>
+	      </property>
+	      <property readable="true" display-name-resource="firstName" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="firstName" column-name="first_name" category-resource="categoryName">
+	        <attribute name="propertySortPriority" value="20"/>
+	      </property>
+	      <property readable="true" display-name-resource="middleName" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="middleName" column-name="middle_name" category-resource="categoryName">
+	        <attribute name="propertySortPriority" value="30"/>
+	      </property>
+	      <property readable="true" display-name-resource="lastName" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="lastName" column-name="last_name" category-resource="categoryName">
+	        <attribute name="propertySortPriority" value="40"/>
+	      </property>
+	      <property readable="true" display-name-resource="suffix" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="suffix" column-name="suffix" category-resource="categoryName">
+	        <attribute name="propertySortPriority" value="50"/>
+	      </property>
+	
+	      <property readable="true" display-name-resource="jobTitle" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="jobTitle" column-name="job_title" category-resource="categoryAddress">
+	        <attribute name="propertySortPriority" value="10"/>
+	      </property>
+	      <property readable="true" display-name-resource="companyName" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="companyName" column-name="company_name" category-resource="categoryAddress">
+	        <attribute name="propertySortPriority" value="20"/>
+	      </property>
+	      <property readable="true" display-name-resource="address1" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="address1" column-name="address_1" category-resource="categoryAddress">
+	        <attribute name="propertySortPriority" value="30"/>
+	      </property>
+	      <property readable="true" display-name-resource="address2" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="address2" column-name="address_2" category-resource="categoryAddress">
+	        <attribute name="propertySortPriority" value="40"/>
+	      </property>
+	      <property readable="true" display-name-resource="address3" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="address3" column-name="address_3" category-resource="categoryAddress">
+	        <attribute name="propertySortPriority" value="50"/>
+	      </property>
+	      <property readable="true" display-name-resource="city" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="city" column-name="city" category-resource="categoryAddress">
+	        <attribute name="propertySortPriority" value="60"/>
+	      </property>
+	      <property readable="true" display-name-resource="county" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="county" column-name="county" category-resource="categoryAddress">
+	        <attribute name="propertySortPriority" value="70"/>
+	      </property>
+	      <property readable="true" display-name-resource="stateAddress" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="stateAddress" column-name="state" category-resource="categoryAddress">
+	        <attribute name="propertySortPriority" value="80"/>
+	      </property>
+	      <property readable="true" display-name-resource="postalCode" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="postalCode" column-name="postal_code" category-resource="categoryAddress">
+	        <attribute name="propertySortPriority" value="90"/>
+	      </property>
+	      <property readable="true" display-name-resource="country" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="country" column-name="country" category-resource="categoryAddress">
+	        <attribute name="propertySortPriority" value="100"/>
+	      </property>
+	
+	      <property readable="true" display-name-resource="phoneNumber" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="phoneNumber" column-name="phone_number" category-resource="categoryContact">
+	        <attribute name="propertySortPriority" value="10"/>
+	      </property>
+	      <property readable="true" display-name-resource="faxNumber" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="faxNumber" column-name="fax_number" category-resource="categoryContact">
+	        <attribute name="propertySortPriority" value="20"/>
+	      </property>
+	      <property readable="true" display-name-resource="email" expert="false" hidden="false" data-type="string" required="false" writable="true" queryable="true" cache-mode="inherit" name="email" column-name="email" category-resource="categoryContact">
+	        <attribute name="propertySortPriority" value="30"/>
+	      </property>
+	    </table>		
+		
+		
+	</item-descriptor>
+
+
+</gsa-template>

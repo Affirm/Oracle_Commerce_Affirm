@@ -1,0 +1,45 @@
+
+<!-- Exclusive product rule -->
+<add-item item-descriptor="affirmRule" id="100002">
+  <set-property name="displayName"><![CDATA[As Low As Product]]></set-property>
+  <set-property name="product"><![CDATA[xprod1011]]></set-property>
+  <set-property name="priority"><![CDATA[2]]></set-property>
+  <set-property name="exclusiveFlag"><![CDATA[true]]></set-property>
+  <set-property name="financingProgramId"><![CDATA[zero_pct_3_6_standard]]></set-property>
+  <set-property name="dataPromoId"><![CDATA[UD3JDNXEMGR68H89]]></set-property>
+  <set-property name="type"><![CDATA[product]]></set-property>
+</add-item>
+
+<!-- Time-based rule -->
+<add-item item-descriptor="affirmRule" id="200002">
+  <set-property name="displayName"><![CDATA[Date between 12/12/16 and 12/12/17]]></set-property>
+  <set-property name="priority"><![CDATA[3]]></set-property>
+  <set-property name="financingProgramId"><![CDATA[zero_pct_3_6_12_standard]]></set-property>
+  <set-property name="dataPromoId"><![CDATA[RV5P6SG0MSAJRCPK]]></set-property>
+  <set-property name="type"><![CDATA[time]]></set-property>
+  <set-property name="startDate"><![CDATA[12/12/2016 17:25:00]]></set-property>
+  <set-property name="endDate"><![CDATA[12/12/2017 17:25:00]]></set-property>
+</add-item>
+
+<!-- Orders over $300 rule -->
+<add-item item-descriptor="affirmRule" id="200003">
+  <set-property name="amount"><![CDATA[300.0]]></set-property>
+  <set-property name="displayName"><![CDATA[Cart over 300]]></set-property>
+  <set-property name="priority"><![CDATA[4]]></set-property>
+  <set-property name="financingProgramId"><![CDATA[zero_pct_3_6_12_standard_2]]></set-property>
+  <set-property name="dataPromoId"><![CDATA[8ZGKI06AOLTSOFUU]]></set-property>
+  <set-property name="type"><![CDATA[cart_total]]></set-property>
+</add-item>
+
+<!-- Exclusive category rule. Category also includes Braided Leather Belt, Terry Gloves, Cable Knit Hat, Straw Hat -->
+<add-item item-descriptor="affirmRule" id="200004">
+  <set-property name="category"><![CDATA[cat70014]]></set-property>
+  <set-property name="displayName"><![CDATA[Products in Accessories category]]></set-property>
+  <set-property name="priority"><![CDATA[1]]></set-property>
+  <set-property name="financingProgramId"><![CDATA[zero_pct_3_6_12_standard_3]]></set-property>
+  <set-property name="dataPromoId"><![CDATA[PUVVC097OZ1NQAPY]]></set-property>
+  <set-property name="exclusiveFlag"><![CDATA[true]]></set-property>
+  <set-property name="type"><![CDATA[category]]></set-property>
+</add-item>
+
+

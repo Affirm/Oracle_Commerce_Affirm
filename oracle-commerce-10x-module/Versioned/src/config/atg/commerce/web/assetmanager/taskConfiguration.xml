@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE task-configuration
+        PUBLIC "-//Art Technology Group, Inc.//DTD Commerce Web Asset Manager//EN"
+        'http://www.atg.com/dtds/web/assetmanager/taskConfiguration_1.0.dtd'>
+
+<task-configuration>
+
+  <default-activity>
+    <tabs>
+      <tab-order>
+        <tab-id>browse</tab-id>
+        <tab-id>search</tab-id>
+        <tab-id>quickSearch</tab-id>
+        <tab-id>syncStatusTab</tab-id>
+        <tab-id>statusTab</tab-id>
+      </tab-order>
+
+      <tab id="browse">
+        <views>
+          <view-order xml-combine="append-without-matching">
+            <view-id>affirmRule</view-id>
+          </view-order>
+
+          <view id="affirmRule">
+            <resource-bundle>com.affirm.bcc.BCCResources</resource-bundle>
+            <page>
+              /browse/list.jsp
+            </page>
+          </view>
+        </views>
+      </tab>
+
+      <tab id="search">
+        <views>
+          <view id="form">
+            <item-types xml-combine="append-without-matching">
+              <item-type>/atg/commerce/catalog/MerchandisingProductCatalog:affirmRule</item-type>
+            </item-types>
+          </view>
+      </tab>
+    </tabs>
+  </default-activity>
+
+</task-configuration>
+

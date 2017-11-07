@@ -1,0 +1,10 @@
+ATG-Product: Affirm Payment Module
+Manifest-Version: 1.0
+ATG-Client-Class-Path: lib/classes.jar
+ATG-Class-Path: lib/classes.jar lib/json-simple-1.1.1.jar lib/gson-2.2.4.jar
+ATG-Config-Path: config/config.jar
+ATG-Required: Store.EStore
+
+Name: lib/classes.jar
+ATG-Client-Update-File: true
+

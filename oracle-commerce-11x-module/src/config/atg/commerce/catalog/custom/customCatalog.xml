@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<gsa-template xml-combine="append">
+
+	<!--///////////////////////////////-->
+	<!--          Affirm Rule          -->
+	<!--///////////////////////////////-->
+	<item-descriptor name="affirmRule" display-name-resource="affirmRule" id-space-name="affirmRule" item-cache-size="1000" query-cache-size="1000" display-property="displayName">
+		<attribute name="resourceBundle" value="atg.commerce.CustomCatalogTemplateResources"/>
+		<attribute name="plural-display-name-resource" value="affirmRule.plural"/>
+		<table name="affirm_rule" type="primary" id-column-name="rule_id">
+			<property name="id" data-type="string" column-name="rule_id" category="Basics" display-name="Rule ID">
+				<attribute name="propertySortPriority" value="-10"/>
+			</property>
+			<property name="displayName" data-type="string" column-name="display_name" category="Basics" display-name="Display Name">
+				<attribute name="propertySortPriority" value="1"/>
+			</property>
+			<property name="priority" data-type="int" column-name="priority" category="Basics" display-name="Priority">
+				<attribute name="propertySortPriority" value="2"/>
+			</property>
+			<property name="dataPromoId" data-type="string" column-name="data_promo_id" category="Basics" display-name="Data Promo ID">
+				<attribute name="propertySortPriority" value="3"/>
+			</property>
+			<property name="financingProgramId" data-type="string" column-name="program_id" category="Basics" display-name="Affirm Program ID">
+				<attribute name="propertySortPriority" value="3"/>
+			</property>
+			<property name="type" data-type="enumerated" column-name="rule_type" category="Basics" display-name="Rule Type">
+				<attribute name="useCodeForValue" value="false"/>
+				<option value="cart_total" code="0"/>
+				<option value="product_amount" code="1"/>
+				<option value="product" code="2"/>
+				<option value="sku" code="3"/>
+				<option value="category" code="4"/>
+				<option value="time" code="5"/>
+				<attribute name="propertySortPriority" value="5"/>
+			</property>
+			<property name="amount" data-type="double" column-name="amount" category="Basics" display-name="Dollar Amount">
+				<attribute name="propertySortPriority" value="6"/>
+			</property>
+			<property name="sku" item-type="sku" column-name="sku_id" category="Basics" display-name="SKU">
+				<attribute name="propertySortPriority" value="9"/>
+			</property>
+			<property name="category" item-type="category" column-name="category_id" category="Basics" display-name="Category">
+				<attribute name="propertySortPriority" value="10"/>
+			</property>
+			<property name="exclusiveFlag" data-type="boolean" column-name="exclusive_flag" category="Basics" display-name="Exclusive">
+				<attribute name="propertySortPriority" value="11"/>
+			</property>
+			<property name="startDate" data-type="timestamp" column-name="start_date" category="Basics" display-name="Start Date">
+				<attribute name="propertySortPriority" value="13"/>
+			</property>
+			<property name="endDate" data-type="timestamp" column-name="end_date" category="Basics" display-name="End Date">
+				<attribute name="propertySortPriority" value="14"/>
+			</property>
+		</table>
+		<table name="affirm_rule_products" type="multi" id-column-name="rule_id" multi-column-name="sequence_num" shared-table-sequence="1">
+			<property name="products" data-type="list" column-name="product_id" category="Basics" display-name="Products" component-item-type="product">
+				<attribute name="propertySortPriority" value="8"/>
+			</property>
+		</table>
+	</item-descriptor>
+
+</gsa-template>
+
+
+

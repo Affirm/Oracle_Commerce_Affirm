@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+ATG-Product: Affirm Versioned Module
+ATG-Client-Class-Path: lib/classes.jar
+ATG-Class-Path: lib/classes.jar
+ATG-Config-Path: config/config.jar
+ATG-Required: Store.Affirm Store.EStore.Versioned
+
+Name: lib/classes.jar
+ATG-Client-Update-File: true
+

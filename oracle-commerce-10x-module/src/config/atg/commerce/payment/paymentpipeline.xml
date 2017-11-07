@@ -1,0 +1,17 @@
+<pipelinemanager>
+	<!-- This chain is used to process a Affirm payment group -->
+	
+	<!-- Affirm processor chain -->
+	<pipelinechain name="affirmPaymentProcessorChain" transaction="TX_REQUIRED" headlink="createAffirmPaymentInfo">
+		<pipelinelink name="createAffirmPaymentInfo" transaction="TX_MANDATORY">
+			<processor jndi="/affirm/commerce/payment/CreateAffirmPaymentInfo" />
+			<transition returnvalue="1" link="processAffirmPayment" />
+		</pipelinelink>
+		<pipelinelink name="processAffirmPayment" transaction="TX_MANDATORY">
+			<processor jndi="/affirm/commerce/payment/ProcessAffirmPayment" />
+		</pipelinelink>
+	</pipelinechain>	
+	
+	
+</pipelinemanager>
+

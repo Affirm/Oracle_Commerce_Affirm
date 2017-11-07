@@ -9,7 +9,7 @@ Compatible with Oracle ATG version 10.x and 11.x.
 
 Installation
 ============
- [https://docs.affirm.com/Integrate_Affirm/Platform_Integration/Oracle_Commerce_Integration](https://docs.affirm.com/Integrate_Affirm/Platform_Integration/Oracle_Commerce_Integration]
+Documentation - https://docs.affirm.com/Integrate_Affirm/Platform_Integration/Oracle_Commerce_Integration
 
 
 
